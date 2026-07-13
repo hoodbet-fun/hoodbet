@@ -2,6 +2,17 @@
 
 Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — PoolTogether V5 + Morpho + HoodBet branding.
 
+## Repositories
+
+| Repo | Description |
+|------|-------------|
+| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Docs, architecture, deploy guides |
+| [contracts](https://github.com/hoodbet-fun/contracts) | Smart contracts (Foundry) |
+| [landing](https://github.com/hoodbet-fun/landing) | hoodbet.fun marketing site |
+| [app](https://github.com/hoodbet-fun/app) | HoodPot dApp (app.hoodbet.fun) |
+| [subgraph](https://github.com/hoodbet-fun/subgraph) | Goldsky subgraph extensions |
+| [bots](https://github.com/hoodbet-fun/bots) | Draw, liquidation, claim bots |
+
 ## Structure
 
 ```

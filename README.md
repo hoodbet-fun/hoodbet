@@ -51,6 +51,6 @@ cd app && npm install && npm run dev
 
 ## Docs
 
-User documentation (GitBook): **[hoodbet-fun.gitbook.io](https://hoodbet-fun.gitbook.io)** — synced from [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs).
+User documentation (GitBook): **[hoodbet.gitbook.io/hoodbet-docs](https://hoodbet.gitbook.io/hoodbet-docs)** — synced from [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs).
 
 Developer docs in the same repo under `developers/`.

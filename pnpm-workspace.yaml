@@ -1,0 +1,5 @@
+packages:
+  - 'landing'
+  - 'app'
+  - 'packages/*'
+  - 'services/bots'

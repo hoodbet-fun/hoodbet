@@ -1,0 +1,11 @@
+{
+  "name": "hoodbet-monorepo",
+  "private": true,
+  "scripts": {
+    "dev:landing": "npm run dev --prefix landing",
+    "dev:app": "npm run dev --prefix app",
+    "build:landing": "npm run build --prefix landing",
+    "build:app": "npm run build --prefix app",
+    "test:contracts": "forge test --root contracts"
+  }
+}

@@ -1,0 +1,47 @@
+# hoodbet.fun
+
+Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — PoolTogether V5 + Morpho + HoodBet branding.
+
+## Structure
+
+```
+├── landing/          → hoodbet.fun
+├── app/              → app.hoodbet.fun (HoodPot dApp)
+├── contracts/        → HoodFeeHarvester, HoodPointsRegistry, HoodRngBlockhash
+├── pt-deploy/        → PT V5 mainnet deploy guide
+├── services/
+│   ├── subgraph/     → Goldsky (free tier)
+│   └── bots/         → liquidation, draw, claim
+├── packages/config/  → shared theme + addresses
+└── docs/
+```
+
+## Quick start
+
+```bash
+# Contracts
+cd contracts && forge test
+
+# Landing
+cd landing && npm install && npm run dev
+
+# App
+cd app && npm install && npm run dev
+```
+
+## On-chain
+
+| Item | Address |
+|------|---------|
+| Morpho vault | `0xDF06045aBAE69d6e73a7F0197FED917032d22194` |
+| USDG | `0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168` |
+| Safe | `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117` |
+
+## Docs
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Brand Book](docs/BRAND.md)
+- [Deploy mainnet](docs/DEPLOY_MAINNET.md)
+- [RNG decision](docs/RNG.md)
+- [Virtuals $HOOD](docs/VIRTUALS.md)
+- [Security checklist](docs/SECURITY.md)

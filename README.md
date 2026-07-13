@@ -6,7 +6,8 @@ Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) —
 
 | Repo | Description |
 |------|-------------|
-| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Docs, architecture, deploy guides |
+| [docs](https://github.com/hoodbet-fun/docs) | Protocol documentation (GitBook) |
+| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + PT deploy guide |
 | [contracts](https://github.com/hoodbet-fun/contracts) | Smart contracts (Foundry) |
 | [landing](https://github.com/hoodbet-fun/landing) | hoodbet.fun marketing site |
 | [app](https://github.com/hoodbet-fun/app) | HoodPot dApp (app.hoodbet.fun) |
@@ -50,9 +51,11 @@ cd app && npm install && npm run dev
 
 ## Docs
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Brand Book](docs/BRAND.md)
-- [Deploy mainnet](docs/DEPLOY_MAINNET.md)
-- [RNG decision](docs/RNG.md)
-- [Virtuals $HOOD](docs/VIRTUALS.md)
-- [Security checklist](docs/SECURITY.md)
+Published on [GitBook](https://hoodbet-fun.gitbook.io) from [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs):
+
+- [Architecture](https://github.com/hoodbet-fun/docs/blob/main/ARCHITECTURE.md)
+- [Brand Book](https://github.com/hoodbet-fun/docs/blob/main/BRAND.md)
+- [Deploy mainnet](https://github.com/hoodbet-fun/docs/blob/main/DEPLOY_MAINNET.md)
+- [RNG decision](https://github.com/hoodbet-fun/docs/blob/main/RNG.md)
+- [Virtuals $HOOD](https://github.com/hoodbet-fun/docs/blob/main/VIRTUALS.md)
+- [Security checklist](https://github.com/hoodbet-fun/docs/blob/main/SECURITY.md)

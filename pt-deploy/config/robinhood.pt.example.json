@@ -1,0 +1,40 @@
+{
+  "prize_pool": {
+    "tier_liquidity_utilization_rate": "500000000000000000",
+    "draw_period_seconds": "86400",
+    "first_draw_starts_at": "1784498400",
+    "grand_prize_period_draws": "91",
+    "number_of_tiers": "4",
+    "tier_shares": "100",
+    "canary_shares": "4",
+    "reserve_shares": "30",
+    "draw_timeout": "60",
+    "prize_token": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168"
+  },
+  "stake_to_win": {
+    "staking_vault": {
+      "asset": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "name": "HoodBet Staked USDG",
+      "symbol": "stUSDG"
+    },
+    "prize_vault": {
+      "name": "HoodBet Prize USDG",
+      "symbol": "przUSDG"
+    }
+  },
+  "rng": {
+    "contract": "REPLACE_WITH_HOOD_RNG_BLOCKHASH_ADDRESS",
+    "type": "standardized"
+  },
+  "draw_manager": {
+    "draw_auction_duration": "10800",
+    "draw_auction_target_sale_time": "3600",
+    "draw_auction_target_first_sale_fraction": "250000000000000000",
+    "draw_auction_max_reward": "33000000000000000",
+    "draw_auction_max_retries": "2"
+  },
+  "claimer": {
+    "time_to_reach_max_fee": "21600",
+    "max_fee_percent": "100000000000000000"
+  }
+}

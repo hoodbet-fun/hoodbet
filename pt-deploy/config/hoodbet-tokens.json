@@ -1,0 +1,12 @@
+{
+  "chain_id": 4663,
+  "usdg": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+  "morpho_vault_hoodbet": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+  "safe": "0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117",
+  "hoodpot_prize_vault": {
+    "name": "HoodPot USDG",
+    "symbol": "hpUSDG",
+    "yield_vault": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+    "prize_token": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168"
+  }
+}

@@ -31,7 +31,7 @@ export const addresses = {
   safe: '0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117',
   morphoVault: '0xDF06045aBAE69d6e73a7F0197FED917032d22194',
   usdg: '0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168',
-  hoodToken: '0x0000000000000000000000000000000000000000',
+  // $HOOD: set only after Virtuals launch on chain 4663
 }
 
 export const tierThresholds = [

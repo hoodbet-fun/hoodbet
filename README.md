@@ -1,13 +1,13 @@
 # hoodbet.fun
 
-Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — PoolTogether V5 + Morpho + HoodBet branding.
+Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — HoodPot + Morpho.
 
 ## Repositories
 
 | Repo | Description |
 |------|-------------|
 | [docs](https://github.com/hoodbet-fun/docs) | Protocol documentation (GitBook) |
-| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + PT deploy guide |
+| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + prize core deploy guide |
 | [contracts](https://github.com/hoodbet-fun/contracts) | Smart contracts (Foundry) |
 | [landing](https://github.com/hoodbet-fun/landing) | hoodbet.fun marketing site |
 | [app](https://github.com/hoodbet-fun/app) | HoodPot dApp (app.hoodbet.fun) |
@@ -20,7 +20,7 @@ Prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) —
 ├── landing/          → hoodbet.fun
 ├── app/              → app.hoodbet.fun (HoodPot dApp)
 ├── contracts/        → HoodFeeHarvester, HoodPointsRegistry, HoodRngBlockhash
-├── pt-deploy/        → PT V5 mainnet deploy guide
+├── pt-deploy/        → Prize pool core deploy guide
 ├── services/
 │   ├── subgraph/     → Goldsky (free tier)
 │   └── bots/         → liquidation, draw, claim

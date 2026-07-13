@@ -1,6 +1,6 @@
-# PoolTogether V5 — Robinhood Chain Deploy
+# HoodPot prize core — Robinhood Chain deploy
 
-Deploy using [GenerationSoftware/pt-v5-mainnet](https://github.com/GenerationSoftware/pt-v5-mainnet) with **real mainnet tokens only**.
+Deploy the prize pool stack using [GenerationSoftware/pt-v5-mainnet](https://github.com/GenerationSoftware/pt-v5-mainnet) scripts with **real mainnet tokens only**. User-facing brand: **HoodPot**.
 
 ## Real on-chain assets (chain 4663)
 
@@ -28,7 +28,7 @@ yarn install && yarn compile
 1. **HoodRngBlockhash** — `contracts/script/DeployCore.s.sol` (no `PRIZE_POOL` yet)
 2. Copy [`config/robinhood.pt.example.json`](../config/robinhood.pt.example.json) → `vendor/pt-v5-mainnet/config/robinhood.json`
 3. Set `rng.contract` to the **deployed HoodRngBlockhash** address (real contract, not zero)
-4. **PT V5 core** — `yarn deploy:robinhood` (after adding script — see below)
+4. **Prize pool core** — `forge script` with `config/robinhood.json` (see deploy order below)
 5. **HoodPot PrizeVault** — Morpho vault `0xDF06…2194` as `yieldVault`, USDG prizes
 6. **HoodFeeHarvester** — `PRIZE_POOL` = deployed PrizePool
 7. Safe: Morpho fee recipients → HoodFeeHarvester

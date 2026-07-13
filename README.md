@@ -51,11 +51,6 @@ cd app && npm install && npm run dev
 
 ## Docs
 
-Published on [GitBook](https://hoodbet-fun.gitbook.io) from [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs):
+User documentation (GitBook): **[hoodbet-fun.gitbook.io](https://hoodbet-fun.gitbook.io)** — synced from [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs).
 
-- [Architecture](https://github.com/hoodbet-fun/docs/blob/main/ARCHITECTURE.md)
-- [Brand Book](https://github.com/hoodbet-fun/docs/blob/main/BRAND.md)
-- [Deploy mainnet](https://github.com/hoodbet-fun/docs/blob/main/DEPLOY_MAINNET.md)
-- [RNG decision](https://github.com/hoodbet-fun/docs/blob/main/RNG.md)
-- [Virtuals $HOOD](https://github.com/hoodbet-fun/docs/blob/main/VIRTUALS.md)
-- [Security checklist](https://github.com/hoodbet-fun/docs/blob/main/SECURITY.md)
+Developer docs in the same repo under `developers/`.

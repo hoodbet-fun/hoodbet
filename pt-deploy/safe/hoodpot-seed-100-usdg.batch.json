@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "chainId": "4663",
+  "createdAt": 1783948560000,
+  "meta": {
+    "name": "HoodPot — seed $100 prize pool",
+    "description": "Optional: fund PrizePool with 100 USDG and credit the HoodPot vault 0x11da…0f24. Safe must hold >= 100 USDG before executing. Run AFTER hoodpot-wiring.batch.json.",
+    "txBuilderVersion": "1.17.1",
+    "createdFromSafeAddress": "0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117"
+  },
+  "transactions": [
+    {
+      "to": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "value": "0",
+      "data": "0x095ea7b300000000000000000000000014e5004a757a85439fc379c8acd5b3b3cdf473440000000000000000000000000000000000000000000000000000000005f5e100",
+      "contractMethod": {
+        "inputs": [
+          { "internalType": "address", "name": "spender", "type": "address" },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "approve",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "spender": "0x14E5004A757A85439Fc379C8AcD5b3b3CDF47344",
+        "amount": "100000000"
+      }
+    },
+    {
+      "to": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "value": "0",
+      "data": "0xa9059cbb00000000000000000000000014e5004a757a85439fc379c8acd5b3b3cdf473440000000000000000000000000000000000000000000000000000000005f5e100",
+      "contractMethod": {
+        "inputs": [
+          { "internalType": "address", "name": "to", "type": "address" },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "transfer",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "to": "0x14E5004A757A85439Fc379C8AcD5b3b3CDF47344",
+        "amount": "100000000"
+      }
+    },
+    {
+      "to": "0x14E5004A757A85439Fc379C8AcD5b3b3CDF47344",
+      "value": "0",
+      "data": "0xeedfb45000000000000000000000000011da9be66d20328c6ea16d52079890322fa90f240000000000000000000000000000000000000000000000000000000005f5e100",
+      "contractMethod": {
+        "inputs": [
+          { "internalType": "address", "name": "_prizeVault", "type": "address" },
+          { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+        ],
+        "name": "contributePrizeTokens",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "_prizeVault": "0x11da9bE66d20328c6eA16d52079890322fA90f24",
+        "_amount": "100000000"
+      }
+    }
+  ]
+}

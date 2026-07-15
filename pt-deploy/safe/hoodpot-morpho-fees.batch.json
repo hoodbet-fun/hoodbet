@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "chainId": "4663",
+  "createdAt": 1783948560000,
+  "meta": {
+    "name": "HoodPot — Morpho fee recipients (step 2)",
+    "description": "Point Morpho vault 0xDF06…2194 performance and management fee recipients to HoodFeeHarvester. Morpho Vault V2 requires submit(bytes) before each curator call — direct setPerformanceFeeRecipient / setManagementFeeRecipient revert with DataNotTimelocked (GS013 in Safe multisend). Timelock is 0 on this vault, so submit+execute can run in the same batch. Run AFTER hoodpot-wiring.batch.json.",
+    "txBuilderVersion": "1.17.1",
+    "createdFromSafeAddress": "0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117"
+  },
+  "transactions": [
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0xef7fa71b000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000246a5f1aa20000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db53200000000000000000000000000000000000000000000000000000000",
+      "contractMethod": {
+        "inputs": [{ "internalType": "bytes", "name": "data", "type": "bytes" }],
+        "name": "submit",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "data": "0x6a5f1aa20000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db532"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0x6a5f1aa20000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db532",
+      "contractMethod": {
+        "inputs": [{ "internalType": "address", "name": "newPerformanceFeeRecipient", "type": "address" }],
+        "name": "setPerformanceFeeRecipient",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "newPerformanceFeeRecipient": "0x7FB9C432e78101a6bB59e681458888acaA3db532"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0xef7fa71b000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000249faae4640000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db53200000000000000000000000000000000000000000000000000000000",
+      "contractMethod": {
+        "inputs": [{ "internalType": "bytes", "name": "data", "type": "bytes" }],
+        "name": "submit",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "data": "0x9faae4640000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db532"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0x9faae4640000000000000000000000007fb9c432e78101a6bb59e681458888acaa3db532",
+      "contractMethod": {
+        "inputs": [{ "internalType": "address", "name": "newManagementFeeRecipient", "type": "address" }],
+        "name": "setManagementFeeRecipient",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "newManagementFeeRecipient": "0x7FB9C432e78101a6bB59e681458888acaA3db532"
+      }
+    }
+  ]
+}

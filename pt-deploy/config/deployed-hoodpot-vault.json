@@ -1,0 +1,19 @@
+{
+  "chain_id": 4663,
+  "deployed_at": "2026-07-13",
+  "prize_vault": "0x11da9bE66d20328c6eA16d52079890322fA90f24",
+  "prize_vault_deprecated": "0x318b89c2b407f091adcbc02854dd3f96e3470e17",
+  "hood_fee_harvester": "0x3632Dd39B2717602fB4d7f79D001c3a51625159d",
+  "hood_fee_harvester_deprecated": "0x7FB9C432e78101a6bB59e681458888acaA3db532",
+  "hood_fee_harvester_deploy_tx": "0x1dfb39dfe23380c701d56bd253ee66c7a07c9dd5f9123aade7fcd08bd1c65f7f",
+  "liquidation_pair": "0x8d1877D32eF88DFb98059d1eE50EFCB68094B772",
+  "yield_buffer": 500000,
+  "deploy_tx": "0xcd67722be1fbc580d016ddf3fec63bca39f1401d6ccc9c160023733893fe3ce7",
+  "test_deposit_tx": "0x06618e459a28b0311e23e02b0dab9ca5eae39ad1a37ee4166ad85043a0c462b7",
+  "safe_pending": [
+    "HoodFeeHarvester.setPrizeVault(0x11da9bE66d20328c6eA16d52079890322fA90f24)",
+    "Morpho.setPerformanceFeeRecipient(0x3632Dd39B2717602fB4d7f79D001c3a51625159d)",
+    "Morpho.setManagementFeeRecipient(0x3632Dd39B2717602fB4d7f79D001c3a51625159d)"
+  ],
+  "safe_batch": "pt-deploy/safe/hoodpot-harvester-v2.batch.json"
+}

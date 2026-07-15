@@ -57,3 +57,36 @@ forge script script/DeployCore.s.sol --rpc-url https://rpc.mainnet.chain.robinho
 ## Post-deploy
 
 Update [`contracts/config/robinhood.json`](../contracts/config/robinhood.json) → `deployed` with verified addresses.
+
+## HoodPot PrizeVault redeploy (yield buffer fix)
+
+The live HoodPot vault `0x318b…0e17` was deployed with **`yieldBuffer = 0`** (immutable). All deposits revert (`LossyDeposit` / `maxDeposit = 0`). **Upgrade is impossible** — deploy a new vault via the existing factory.
+
+### Prerequisites
+
+1. **≥ 1 USDG** on Safe (`0x5FF9…f117`) — seeded into the new vault at deploy
+2. Safe executes the transactions below (see [`scripts/redeploy-hoodpot-vault.sh`](./scripts/redeploy-hoodpot-vault.sh))
+
+### Safe transaction batch
+
+| # | To | Function | Notes |
+|---|-----|----------|-------|
+| 1 | USDG `0x5fc5…d168` | `approve(factory, 1_000_000)` | Allow buffer transfer |
+| 2 | PrizeVaultFactory `0xa81b…e5c2` | `deployVault(...)` | Morpho yield vault, buffer `1_000_000`, owner = Safe |
+| 3 | HoodFeeHarvester `0x3632…159d` | `setPrizeVault(newVault)` | Point fee harvester at new vault |
+
+Generate calldata:
+
+```bash
+cd pt-deploy
+./scripts/redeploy-hoodpot-vault.sh status
+./scripts/redeploy-hoodpot-vault.sh calldata-approve
+./scripts/redeploy-hoodpot-vault.sh calldata-deploy
+```
+
+### After deploy
+
+1. `NEW_VAULT=0x... ./scripts/redeploy-hoodpot-vault.sh verify` — `maxDeposit` must be **> 0**
+2. Update `prizeVault` in `contracts/config/robinhood.json`, `app/src/config.js`, `packages/config/hoodbet.js`, subgraph `networks/robinhood.json`
+3. Mark `0x318b…0e17` as deprecated in docs (zero TVL — no user migration)
+4. Test a small deposit on app.hoodbet.fun

@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "chainId": "4663",
+  "createdAt": 1784065920000,
+  "meta": {
+    "name": "HoodPot — HoodFeeHarvester v2 (fix PT V5 contribute)",
+    "description": "Wire new HoodFeeHarvester 0x3632…159d (fixes contributePrizeTokens delta-balance bug). Step 1: setPrizeVault on harvester. Steps 2–5: point Morpho vault 0xDF06…2194 performance + management fee recipients to the new harvester (submit + execute timelock flow). Deprecates 0x7FB9…b532 — micro-fee shares on the old harvester are not recoverable. Deploy tx: 0x1dfb39dfe23380c701d56bd253ee66c7a07c9dd5f9123aade7fcd08bd1c65f7f.",
+    "txBuilderVersion": "1.17.1",
+    "createdFromSafeAddress": "0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117"
+  },
+  "transactions": [
+    {
+      "to": "0x3632Dd39B2717602fB4d7f79D001c3a51625159d",
+      "value": "0",
+      "data": "0x81f60fd000000000000000000000000011da9be66d20328c6ea16d52079890322fa90f24",
+      "contractMethod": {
+        "inputs": [{ "internalType": "address", "name": "_prizeVault", "type": "address" }],
+        "name": "setPrizeVault",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "_prizeVault": "0x11da9bE66d20328c6eA16d52079890322fA90f24"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0xef7fa71b000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000246a5f1aa20000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d00000000000000000000000000000000000000000000000000000000",
+      "contractMethod": {
+        "inputs": [{ "internalType": "bytes", "name": "data", "type": "bytes" }],
+        "name": "submit",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "data": "0x6a5f1aa20000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0x6a5f1aa20000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d",
+      "contractMethod": {
+        "inputs": [{ "internalType": "address", "name": "newPerformanceFeeRecipient", "type": "address" }],
+        "name": "setPerformanceFeeRecipient",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "newPerformanceFeeRecipient": "0x3632Dd39B2717602fB4d7f79D001c3a51625159d"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0xef7fa71b000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000249faae4640000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d00000000000000000000000000000000000000000000000000000000",
+      "contractMethod": {
+        "inputs": [{ "internalType": "bytes", "name": "data", "type": "bytes" }],
+        "name": "submit",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "data": "0x9faae4640000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d"
+      }
+    },
+    {
+      "to": "0xDF06045aBAE69d6e73a7F0197FED917032d22194",
+      "value": "0",
+      "data": "0x9faae4640000000000000000000000003632dd39b2717602fb4d7f79d001c3a51625159d",
+      "contractMethod": {
+        "inputs": [{ "internalType": "address", "name": "newManagementFeeRecipient", "type": "address" }],
+        "name": "setManagementFeeRecipient",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "newManagementFeeRecipient": "0x3632Dd39B2717602fB4d7f79D001c3a51625159d"
+      }
+    }
+  ]
+}
